@@ -7,7 +7,7 @@ function memo(fn) {
   const start = new Date().getTime();
   let finish1;
   let finish2;
-  
+
   let cache = new Map();
 
   return function(...args) {
@@ -17,8 +17,8 @@ function memo(fn) {
       return `Time if result is already in cache: ${finish2 - finish1}ms ${cache.get(key)}`;
     }
     let result = fn.call(this, ...args);
-    cache.set(key, result);    
-    
+    cache.set(key, result);
+
     finish1 = new Date().getTime();
     return `Time if cache is empty: ${finish1 - start}ms ${result}`;
   };
@@ -26,7 +26,7 @@ function memo(fn) {
 
 
 function hash(...args) {
-  return args.join(', ');
+  return args.join('');
 }
 
 
