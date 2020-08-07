@@ -1,1 +1,1 @@
-##My some JS code samples.
+My some JS code samples.
